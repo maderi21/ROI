@@ -1,10 +1,15 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./custom.scss";
+import Income from "./components/Income";
+import CashFlow from "./components/CashFlow";
 
 function App() {
   return (
     <div className="bg-primary">
-      <h1>hello</h1>
+      <div className="container mt-5">
+        <Income />
+        <CashFlow />
+      </div>
     </div>
   );
 }
