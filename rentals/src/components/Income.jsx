@@ -9,7 +9,7 @@ const Income = () => {
         <input
           type="number"
           id="monthlyRent"
-          className="d-flex flex-row mb-3"
+          className="d-flex flex-row mb-2"
         />
       </div>
       <div>
@@ -17,7 +17,7 @@ const Income = () => {
         <input
           type="number"
           id="monthlyRent"
-          className="d-flex flex-row mb-3"
+          className="d-flex flex-row mb-2"
         />
       </div>
       <div>
@@ -25,7 +25,7 @@ const Income = () => {
         <input
           type="number"
           id="monthlyRent"
-          className="d-flex flex-row mb-3"
+          className="d-flex flex-row mb-2"
         />
       </div>
       <div>
