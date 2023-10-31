@@ -1,79 +1,64 @@
-import React, { useState } from "react";
+import React from "react";
 
-const CashRoi = ({ cashFlow }) => {
-  const [downPayment, setDownPayment] = useState(0);
-  const [closingCosts, setClosingCosts] = useState(0);
-  const [rehabBudget, setRehabBudget] = useState(0);
-  const [miscOther, setMiscOther] = useState(0);
+const CashRoi = ({ onOutcomeChange, sumInvestment, annCashFlow, cashRoi }) => {
+  const handleOutcomeChange = (event) => {
+    const name = event.target.name;
+    const value = parseInt(event.target.value, 10) || 0;
 
-  const handleDownPayment = (e) => {
-    setDownPayment(parseInt(e.target.value));
+    onOutcomeChange((prevValues) => ({
+      ...prevValues,
+      [name]: value,
+    }));
   };
-
-  const handleClosingCosts = (e) => {
-    setClosingCosts(parseInt(e.target.value));
-  };
-
-  const handleRehabBudget = (e) => {
-    setRehabBudget(parseInt(e.target.value));
-  };
-
-  const handleMiscOther = (e) => {
-    setMiscOther(parseInt(e.target.value));
-  };
-
-  const sumInvestment = downPayment + closingCosts + rehabBudget + miscOther;
-  const AnnChashFlow = cashFlow * 12;
 
   return (
     <div>
       <h2>CASH ON CASH ROI</h2>
       <div>
-        <label htmlFor="monthlyRent">Down Payment</label>
+        <label>Down Payment</label>
         <input
           type="number"
-          value={downPayment}
+          name="downPayment"
           className="d-flex flex-row mb-2"
-          onChange={handleDownPayment}
+          onChange={handleOutcomeChange}
         />
       </div>
       <div>
-        <label htmlFor="monthlyRent">Closing Costs</label>
+        <label>Closing Costs</label>
         <input
           type="number"
-          value={closingCosts}
+          name="closingCosts"
           className="d-flex flex-row mb-2"
-          onChange={handleClosingCosts}
+          onChange={handleOutcomeChange}
         />
       </div>
       <div>
-        <label htmlFor="monthlyRent">Rehab Budget</label>
+        <label>Rehab Budget</label>
         <input
           type="number"
-          value={rehabBudget}
+          name="rehabBudget"
           className="d-flex flex-row mb-2"
-          onChange={handleRehabBudget}
+          onChange={handleOutcomeChange}
         />
       </div>
       <div>
-        <label htmlFor="monthlyRent">Misc Other</label>
+        <label>Misc Other</label>
         <input
           type="number"
-          value={miscOther}
+          name="miscOther"
           className="d-flex flex-row mb-2"
-          onChange={handleMiscOther}
+          onChange={handleOutcomeChange}
         />
       </div>
       <div>
         <h3>Total Invested {sumInvestment}</h3>
       </div>
       <div>
-        <h4>Annual Cash Flow {AnnChashFlow}</h4>
+        <h4>Annual Cash Flow {annCashFlow}</h4>
       </div>
       <div>
-        <h3>TOTAL INVESTMENT</h3>
+        <h3>Cash on Cash ROI {cashRoi} </h3>
       </div>
-      <input type="number" id="monthlyRent" className="d-flex flex-row mb-2" />
     </div>
   );
 };

@@ -1,14 +1,17 @@
 import React from "react";
 
-const Outcome = () => {
+const Outcome = ({ cashRoi }) => {
+  const style = {
+    color: cashRoi > 8 ? "blue" : "darkred",
+  };
+
   return (
     <>
       <div className="d-flex justify-content-center">
-        <h2>Am I going to Invest?</h2>
+        <h2>Should You Invest?</h2>
       </div>
-      <div className="d-flex justify-content-center">
-        <button className="m-2 mb-5">yes</button>
-        <button className="m-2 mb-5">no</button>
+      <div style={style} className="d-flex justify-content-center m-3 p-3 ">
+        {cashRoi > 8 ? <p>YES</p> : <p>NO</p>}
       </div>
     </>
   );

@@ -7,7 +7,7 @@ const CashFlow = ({ cashFlow, sumIncome, sumExpenses }) => {
       <p>Rental Income: {sumIncome}</p>
       <p>Rental Expenses: {sumExpenses}</p>
       <div>
-        <h3>Total monthy cashflow is {cashFlow}</h3>
+        <h3>Total monthly cashflow is {cashFlow}</h3>
       </div>
     </div>
   );
