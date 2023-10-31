@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const CashRoi = () => {
+const CashRoi = ({ cashFlow }) => {
   const [downPayment, setDownPayment] = useState(0);
   const [closingCosts, setClosingCosts] = useState(0);
   const [rehabBudget, setRehabBudget] = useState(0);
@@ -23,6 +23,7 @@ const CashRoi = () => {
   };
 
   const sumInvestment = downPayment + closingCosts + rehabBudget + miscOther;
+  const AnnChashFlow = cashFlow * 12;
 
   return (
     <div>
@@ -66,14 +67,8 @@ const CashRoi = () => {
       <div>
         <h3>Total Invested {sumInvestment}</h3>
       </div>
-
       <div>
-        <label htmlFor="monthlyRent">Annual Cash Flow</label>
-        <input
-          type="number"
-          id="monthlyRent"
-          className="d-flex flex-row mb-2"
-        />
+        <h4>Annual Cash Flow {AnnChashFlow}</h4>
       </div>
       <div>
         <h3>TOTAL INVESTMENT</h3>

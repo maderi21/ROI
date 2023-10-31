@@ -38,6 +38,7 @@ const CashFlow = () => {
       <div>
         <h3>Total monthy cashflow is {cashFlow}</h3>
       </div>
+      <input type="number" id="monthlyRent" className="d-flex flex-row mb-3" />
     </div>
   );
 };
