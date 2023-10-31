@@ -6,15 +6,15 @@ const Income = () => {
   const [misc, setMisc] = useState(0);
 
   const handleRent = (e) => {
-    setRent(parseInt(e.target.value, 10), 0);
+    setRent(parseInt(e.target.value));
   };
 
   const handleEnergy = (e) => {
-    setEnergy(parseInt(e.target.value, 10), 0);
+    setEnergy(parseInt(e.target.value));
   };
 
   const handleMisc = (e) => {
-    setMisc(parseInt(e.target.value, 10), 0);
+    setMisc(parseInt(e.target.value));
   };
 
   const sumIncome = rent + energy + misc;
@@ -50,7 +50,7 @@ const Income = () => {
         />
       </div>
       <div>
-        <h3>TOTAL MONTHLY INCOME IS {sumIncome}</h3>
+        <h3>Total monthy income is {sumIncome}</h3>
       </div>
     </div>
   );
