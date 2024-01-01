@@ -84,9 +84,9 @@ function App() {
   const cashRoi = ((annCashFlow / sumInvestment) * 100).toFixed(2);
 
   return (
-    <div className="bg-primary container">
+    <div className="bg-primary text-center container mt-3">
       <section>
-        <div className="row align-items-center">
+        <div className="row text-center">
           <div className="col-md p-5">
             <Income onIncomeChange={handleIncomeChange} />
           </div>
@@ -100,7 +100,7 @@ function App() {
         </div>
       </section>
       <section>
-        <div className="row align-items-center">
+        <div className="row text-center">
           <div className="col-md p-5">
             <Expenses onExpenseChange={handleExpenseChange} />
           </div>

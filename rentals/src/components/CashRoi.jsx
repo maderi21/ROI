@@ -13,8 +13,8 @@ const CashRoi = ({ onOutcomeChange, sumInvestment, annCashFlow, cashRoi }) => {
 
   return (
     <div>
-      <h2>CASH ON CASH ROI</h2>
-      <div>
+      <h2 className="mb-3">CASH ON CASH ROI</h2>
+      <div className="row row-cols-2 mx-5">
         <label>Down Payment</label>
         <input
           type="number"
@@ -23,7 +23,7 @@ const CashRoi = ({ onOutcomeChange, sumInvestment, annCashFlow, cashRoi }) => {
           onChange={handleOutcomeChange}
         />
       </div>
-      <div>
+      <div className="row row-cols-2 mx-5">
         <label>Closing Costs</label>
         <input
           type="number"
@@ -32,7 +32,7 @@ const CashRoi = ({ onOutcomeChange, sumInvestment, annCashFlow, cashRoi }) => {
           onChange={handleOutcomeChange}
         />
       </div>
-      <div>
+      <div className="row row-cols-2 mx-5">
         <label>Rehab Budget</label>
         <input
           type="number"
@@ -41,7 +41,7 @@ const CashRoi = ({ onOutcomeChange, sumInvestment, annCashFlow, cashRoi }) => {
           onChange={handleOutcomeChange}
         />
       </div>
-      <div>
+      <div className="row row-cols-2 mx-5">
         <label>Misc Other</label>
         <input
           type="number"
@@ -50,14 +50,16 @@ const CashRoi = ({ onOutcomeChange, sumInvestment, annCashFlow, cashRoi }) => {
           onChange={handleOutcomeChange}
         />
       </div>
-      <div>
-        <h3>Total Invested {sumInvestment}</h3>
-      </div>
-      <div>
-        <h4>Annual Cash Flow {annCashFlow}</h4>
-      </div>
-      <div>
-        <h3>Cash on Cash ROI {cashRoi} </h3>
+      <div className="m-5">
+        <div>
+          <h3>Total Invested {sumInvestment}</h3>
+        </div>
+        <div>
+          <h4>Annual Cash Flow {annCashFlow}</h4>
+        </div>
+        <div>
+          <h3>Cash on Cash ROI {cashRoi} </h3>
+        </div>
       </div>
     </div>
   );

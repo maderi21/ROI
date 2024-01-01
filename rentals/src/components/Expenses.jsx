@@ -13,8 +13,8 @@ const Expenses = ({ onExpenseChange }) => {
 
   return (
     <div>
-      <h2>EXPENSES</h2>
-      <div>
+      <h2 className="mb-3">EXPENSES</h2>
+      <div className="row row-cols-2 mx-5">
         <label>Tax</label>
         <input
           type="number"
@@ -23,7 +23,7 @@ const Expenses = ({ onExpenseChange }) => {
           onChange={handleInputChange}
         />
       </div>
-      <div>
+      <div className="row row-cols-2 mx-5">
         <label>Insurance</label>
         <input
           type="number"
@@ -32,7 +32,7 @@ const Expenses = ({ onExpenseChange }) => {
           onChange={handleInputChange}
         />
       </div>
-      <div>
+      <div className="row row-cols-2 mx-5">
         <label>Utilities</label>
         <input
           type="number"
@@ -41,7 +41,7 @@ const Expenses = ({ onExpenseChange }) => {
           onChange={handleInputChange}
         />
       </div>
-      <div>
+      <div className="row row-cols-2 mx-5">
         <label>HOA</label>
         <input
           type="number"
@@ -50,7 +50,7 @@ const Expenses = ({ onExpenseChange }) => {
           onChange={handleInputChange}
         />
       </div>
-      <div>
+      <div className="row row-cols-2 mx-5">
         <label>Vacancy</label>
         <input
           type="number"
@@ -59,7 +59,7 @@ const Expenses = ({ onExpenseChange }) => {
           onChange={handleInputChange}
         />
       </div>
-      <div>
+      <div className="row row-cols-2 mx-5">
         <label>Repairs</label>
         <input
           type="number"
@@ -68,7 +68,7 @@ const Expenses = ({ onExpenseChange }) => {
           onChange={handleInputChange}
         />
       </div>
-      <div>
+      <div className="row row-cols-2 mx-5">
         <label>CapEx</label>
         <input
           type="number"
@@ -77,7 +77,7 @@ const Expenses = ({ onExpenseChange }) => {
           onChange={handleInputChange}
         />
       </div>
-      <div>
+      <div className="row row-cols-2 mx-5">
         <label>Property Mng</label>
         <input
           type="number"
@@ -86,7 +86,7 @@ const Expenses = ({ onExpenseChange }) => {
           className="d-flex flex-row mb-2"
         />
       </div>
-      <div>
+      <div className="row row-cols-2 mx-5">
         <label>Mortgage</label>
         <input
           type="number"

@@ -13,31 +13,31 @@ const Income = ({ onIncomeChange }) => {
 
   return (
     <div>
-      <h2>INCOME</h2>
-      <div>
+      <h2 className="mb-3">INCOME</h2>
+      <div className="row row-cols-2 mx-5">
         <label htmlFor="monthlyRent">Rental Income</label>
         <input
           type="number"
           name="rentalIncome"
-          className="d-flex flex-row mb-2"
+          className="mb-2"
           onChange={handleInputChange}
         />
       </div>
-      <div>
+      <div className="row row-cols-2 mx-5">
         <label htmlFor="monthlyRent">Energy</label>
         <input
           type="number"
           name="energy"
-          className="d-flex flex-row mb-2"
+          className="mb-2"
           onChange={handleInputChange}
         />
       </div>
-      <div>
+      <div className="row row-cols-2 mx-5">
         <label htmlFor="monthlyRent">Misc</label>
         <input
           type="number"
           name="misc"
-          className="d-flex flex-row mb-2"
+          className="mb-2"
           onChange={handleInputChange}
         />
       </div>
