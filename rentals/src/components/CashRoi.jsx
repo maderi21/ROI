@@ -1,6 +1,12 @@
 import React from "react";
 
 const CashRoi = ({ onOutcomeChange, sumInvestment, annCashFlow, cashRoi }) => {
+  const sanitizeValue = (value) => {
+    if (isNaN(value) || !isFinite(value)) {
+      return "n/a";
+    }
+    return value;
+  };
   const handleOutcomeChange = (event) => {
     const name = event.target.name;
     const value = parseInt(event.target.value, 10) || 0;
@@ -11,6 +17,9 @@ const CashRoi = ({ onOutcomeChange, sumInvestment, annCashFlow, cashRoi }) => {
     }));
   };
 
+  const sanitizedSumInvestment = sanitizeValue(sumInvestment);
+  const sanitizedAnnCashFlow = sanitizeValue(annCashFlow);
+  const sanitizedCashRoi = sanitizeValue(cashRoi);
   return (
     <div>
       <h2 className="mb-3">CASH ON CASH ROI</h2>
@@ -52,13 +61,13 @@ const CashRoi = ({ onOutcomeChange, sumInvestment, annCashFlow, cashRoi }) => {
       </div>
       <div className="m-5">
         <div>
-          <h3>Total Invested {sumInvestment}</h3>
+          <h3>Total Invested {sanitizedSumInvestment}</h3>
         </div>
         <div>
-          <h4>Annual Cash Flow {annCashFlow}</h4>
+          <h4>Annual Cash Flow {sanitizedAnnCashFlow}</h4>
         </div>
         <div>
-          <h3>Cash on Cash ROI {cashRoi} </h3>
+          <h3>Cash on Cash ROI {sanitizedCashRoi} %</h3>
         </div>
       </div>
     </div>
