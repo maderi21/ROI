@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./custom.scss";
+import "./custom.css";
 import Income from "./components/Income";
 import CashFlow from "./components/CashFlow";
 import Expenses from "./components/Expenses";
@@ -84,7 +84,7 @@ function App() {
   const cashRoi = ((annCashFlow / sumInvestment) * 100).toFixed(2);
 
   return (
-    <div className="bg-primary text-center container mt-3">
+    <div className="main-div text-center">
       <section>
         <div className="row text-center">
           <div className="col-md p-5">

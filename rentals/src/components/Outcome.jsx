@@ -13,7 +13,7 @@ const Outcome = ({ cashRoi }) => {
       </div>
       <div
         style={style}
-        className="d-flex justify-content-center m-3 p-3 fs-3 fw-bold "
+        className="d-flex justify-content-center fs-3 fw-bold "
       >
         {cashRoi > 8 ? <p>YES!</p> : <p>NO!</p>}
       </div>
