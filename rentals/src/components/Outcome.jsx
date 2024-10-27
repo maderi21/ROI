@@ -8,6 +8,14 @@ const Outcome = ({ cashRoi }) => {
   return (
     <>
       <hr></hr>
+      <p>
+        An 8% ROI on long-term real estate investing is generally considered a
+        solid return, particularly if it's sustained over several years
+      </p>
+      <p>
+        Please keep in mind, the ROI in real estate investing is highly
+        dependent on individual strategy, goals, and risk tolerance
+      </p>
       <div className="d-flex justify-content-center">
         <h2>Should You Invest?</h2>
       </div>
