@@ -19,10 +19,7 @@ const Outcome = ({ cashRoi }) => {
       <div className="d-flex justify-content-center">
         <h2>Should You Invest?</h2>
       </div>
-      <div
-        style={style}
-        className="d-flex justify-content-center fs-3 fw-bold "
-      >
+      <div style={style} className="d-flex justify-content-center fs-3 fw-bold">
         {cashRoi > 8 ? <p>YES!</p> : <p>NO!</p>}
       </div>
     </>
