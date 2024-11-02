@@ -84,13 +84,18 @@ function App() {
   const cashRoi = ((annCashFlow / sumInvestment) * 100).toFixed(2);
 
   return (
-    <div className="main-div text-center p-5	">
+    <div className="main-div text-center p-5">
+      <div>
+        <h1 className="border-bottom pb-3 mb-5">
+          Real Estate Investment Calculator/long-term
+        </h1>
+      </div>
       <section>
         <div className="row text-center">
-          <div className="col-md">
+          <div className="col-md-6">
             <Income onIncomeChange={handleIncomeChange} />
           </div>
-          <div className="col-md">
+          <div className="col-md-6">
             <CashFlow
               cashFlow={cashFlow}
               sumIncome={sumIncome}
@@ -99,12 +104,12 @@ function App() {
           </div>
         </div>
       </section>
-      <section>
-        <div className="row text-center mt-5">
-          <div className="col-md">
+      <section className="mt-5">
+        <div className="row text-center">
+          <div className="col-md-6">
             <Expenses onExpenseChange={handleExpenseChange} />
           </div>
-          <div className="col-md">
+          <div className="col-md-6">
             <CashRoi
               onOutcomeChange={handleOutcomeChange}
               sumInvestment={sumInvestment}
